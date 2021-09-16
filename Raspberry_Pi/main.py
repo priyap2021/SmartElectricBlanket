@@ -20,7 +20,7 @@ class GUI(tk.Frame):
     def draw_buttons(self):
         self.power_button = tk.Button(self.button_frame, text="Power", fg='red', height=2, width=20)
         self.wifi_button = tk.Button(self.button_frame, text="Wifi", fg='blue', height=2, width=20)
-        self.temp_scale = tk.Scale(self.master, from_=0, to=140, tickinterval=1, length=450)
+        self.temp_scale = tk.Scale(self.master, from_=32, to=140, tickinterval=1, length=450)
         self.power_button.pack(side=tk.RIGHT)
         self.wifi_button.pack(side=tk.LEFT)
         self.temp_scale.pack(side=tk.RIGHT)
