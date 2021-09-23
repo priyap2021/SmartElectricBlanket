@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class OnBtnScript : MonoBehaviour
+public class btnScripts : MonoBehaviour
 {
 
     public Text label;
@@ -19,7 +19,11 @@ public class OnBtnScript : MonoBehaviour
         
     }
 
-    public void onTapped(){
+    public void powerOnBlanket(){ // this method will later be used to power on the blanket
+        Debug.Log("Tapped: " + label.text);
+    }
+
+    public void powerOffBlanket(){
         Debug.Log("Tapped: " + label.text);
     }
 }
