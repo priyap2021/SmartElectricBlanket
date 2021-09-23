@@ -576,7 +576,7 @@ GameObject:
   - component: {fileID: 1969960855}
   - component: {fileID: 1969960854}
   m_Layer: 5
-  m_Name: DigitStrip
+  m_Name: NameStrip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
