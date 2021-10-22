@@ -229,6 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _slider: {fileID: 181734430}
   _sliderText: {fileID: 1506308370}
+  currentTemp: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,12 +599,12 @@ PrefabInstance:
     - target: {fileID: 3217225043830591767, guid: 532894d3e637d41bdab3acf83e33bdb0,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3217225043830591767, guid: 532894d3e637d41bdab3acf83e33bdb0,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 3217225043830591767, guid: 532894d3e637d41bdab3acf83e33bdb0,
         type: 3}
@@ -924,8 +925,8 @@ MonoBehaviour:
   m_Spacing: 5
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 1
-  m_ChildControlHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -1561,12 +1562,12 @@ PrefabInstance:
     - target: {fileID: 3217225043830591767, guid: 532894d3e637d41bdab3acf83e33bdb0,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3217225043830591767, guid: 532894d3e637d41bdab3acf83e33bdb0,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 3217225043830591767, guid: 532894d3e637d41bdab3acf83e33bdb0,
         type: 3}
