@@ -9,7 +9,13 @@ class On_Display:
         self.oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
         #create i2c instance
         self.i2c = io.I2C(board.SCL, board.SDA)
-        self.draw_labels() #make sure the labels are drawn
+        self.init_labels() #make sure the labels are drawn
+            
+    def init_labels():
+        self.oled.fill(0) #clear screen and then write the text, more labels can be added if needed (not much though)
+        self.oled.text('Temp: ', 0, 0)
+        self.oled.text('Device: ', 0, 20)
+        self.oled.show()
             
     def draw_labels(newTemp, conDevice):
         
@@ -28,3 +34,4 @@ class On_Display:
             self.oled.text('No Device', 15, 20)   
                     
         self.oled.show() #show the text that was just drawn, nuff said
+    
