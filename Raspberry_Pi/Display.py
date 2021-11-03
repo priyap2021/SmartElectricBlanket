@@ -5,10 +5,10 @@ import adafruit_ssd1306
 
 class On_Display:
     def __init__(self): #define the class constructor (master will usually be an instance of tk.Tk())
-        #create an instance of the ssd1306 I2C driver
-        self.oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c)
         #create i2c instance
         self.i2c = io.I2C(board.SCL, board.SDA)
+        #create an instance of the ssd1306 I2C driver
+        self.oled = adafruit_ssd1306.SSD1306_I2C(128, 32, self.i2c)
         self.init_labels() #make sure the labels are drawn
             
     def init_labels():
