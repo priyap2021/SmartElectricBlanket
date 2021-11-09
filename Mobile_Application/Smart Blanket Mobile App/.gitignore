@@ -56,8 +56,11 @@ crashlytics-build.properties
 Thumbs.db
 Thumbs.db.meta
 
-# MacOS
+# MacOSssssssss
 *.DS_Store
 
 # VS Code
 *.vscode
+
+#Ignoring the iOS build
+build-ios/
