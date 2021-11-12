@@ -13,7 +13,7 @@ cur_device = "none"
 while True: #create an infinite loop, the idea should be to have this run for the duration of the device uptime
     #fetch the current temp
     temp = sensor.get_temperature()
-    #time.sleep(.5)
+    time.sleep(0.05)
     cur_temp = sensor.get_temperature()
     #TODO: insert a line here to get the current connected device name
     if temp != cur_temp: #TODO: include an OR here for if the connected device changes
