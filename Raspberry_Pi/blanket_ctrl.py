@@ -7,15 +7,15 @@ GPIO.setmode(GPIO.BCM)
 sensor = W1ThermSensor()
 
 #specify what pin(s) to use
-GPIO.setup(17, GPIO.OUT) # '.OUT' indicates that the signal is outgoing
+GPIO.setup(32, GPIO.OUT) # '.OUT' indicates that the signal is outgoing
 
 temp = sensor.get_temperature()
 
 def active_sig():
-    GPIO.output(17, True)# send the signal
+    GPIO.output(32, True)# send the signal
 
 def kill_sig():
-    GPIO.output(17, False)# stop sending the signal
+    GPIO.output(32, False)# stop sending the signal
     
 def change_temp(req_temp):
     temp = sensor.get_temperature()
