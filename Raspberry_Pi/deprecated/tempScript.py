@@ -29,7 +29,11 @@ def read_temp():
 		raw_temp = lines[1][equals_pos+2:]
 		temp_c = float(raw_temp) / 1000
 		temp_f = temp_c * 9 / 5 + 32
-		return temp_f, temp_c
+		#return temp_f, temp_c
+        #for now I'll have this only print the temp in Fahrenheit
+        #this will make it easier in some of the other scripts
+        return temp_f 
+        
 
 while True:
 	print(read_temp())
