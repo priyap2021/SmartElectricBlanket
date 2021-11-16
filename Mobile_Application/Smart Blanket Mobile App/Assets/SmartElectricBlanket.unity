@@ -604,7 +604,7 @@ PrefabInstance:
     - target: {fileID: 3217225043830591767, guid: 532894d3e637d41bdab3acf83e33bdb0,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 110
+      value: 62.5
       objectReference: {fileID: 0}
     - target: {fileID: 3217225043830591767, guid: 532894d3e637d41bdab3acf83e33bdb0,
         type: 3}
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1167198629}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
@@ -922,13 +922,13 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 5
+  m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
+  m_ChildScaleWidth: 1
+  m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
 --- !u!224 &1225410580 stripped
 RectTransform:
@@ -1204,7 +1204,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -4.999878, y: 0}
+  m_AnchoredPosition: {x: -4.9998474, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1831823405
@@ -1457,7 +1457,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -14.999878, y: 0}
+  m_AnchoredPosition: {x: -14.9999695, y: 0}
   m_SizeDelta: {x: -50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1981339730
@@ -1567,7 +1567,7 @@ PrefabInstance:
     - target: {fileID: 3217225043830591767, guid: 532894d3e637d41bdab3acf83e33bdb0,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 110
+      value: 62.5
       objectReference: {fileID: 0}
     - target: {fileID: 3217225043830591767, guid: 532894d3e637d41bdab3acf83e33bdb0,
         type: 3}

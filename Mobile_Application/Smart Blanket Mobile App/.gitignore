@@ -61,3 +61,6 @@ Thumbs.db.meta
 
 # VS Code
 *.vscode
+
+#Ignoring the iOS build
+build-ios/
