@@ -13,14 +13,20 @@ public class sliderScript : MonoBehaviour
 
     [SerializeField] public TextMeshProUGUI currentTemp;
     
+    WebSocketClient ws;
+
     // Start is called before the first frame update
     void Start()
     {
-        _slider.onValueChanged.AddListener((v) => {
+        // get acces to the WebSocket component
+        ws = gameObject.AddComponent(typeof(WebSocketClient)) as WebSocketClient;
+
+        _slider.onValueChanged.AddListener((v) => { // added a listener to tell when the temperature is changed
             _sliderText.text = v.ToString("0°C");
 
             currentTemp = getCurrentTemp();
             Debug.Log("Current temp is " + currentTemp.text);
+            ws.sendMessage(currentTemp.text); // send the server the current temperature
         });
     }
     // get the current value of the temperature

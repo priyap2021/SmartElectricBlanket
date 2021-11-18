@@ -1,5 +1,5 @@
-using WebSocketSharp;
 using UnityEngine;
+using WebSocketSharp;
 
 public class WebSocketClient : MonoBehaviour
 {
@@ -7,21 +7,19 @@ public class WebSocketClient : MonoBehaviour
     void Start()
     {
         ws = new WebSocket("ws://localhost:8080"); // creates the initial websocket, and use port 8080
-        ws.OnMessage += (sender, message) =>
-        { // if the server sent a message, print it out
-            Debug.Log("Got a message from " +((WebSocket)sender).Url + ". Data sent: " + message.Data);
-        };
-        
         ws.Connect(); // connect the websocket to the server
-
-        
     }
     
     void Update()
     {
-        if (ws == null){ // if there's an issue with the websocket, and it's null, just return
+        if (ws == null){ // if the websocket hasn't started, just return
             return;
         }
         
+    }
+
+    public void sendMessage(string message) // accepts a message to be sent to the server
+    {
+        ws.Send(message);
     }
 }
