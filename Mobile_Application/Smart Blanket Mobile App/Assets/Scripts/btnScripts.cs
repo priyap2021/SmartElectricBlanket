@@ -29,6 +29,6 @@ public class btnScripts : MonoBehaviour
 
     public void powerOffBlanket(){
         Debug.Log("Tapped: " + label.text);
-         ws.sendMessage("OFF"); // send a message to the Server saying "OFF"
+        ws.sendMessage("OFF"); // send a message to the Server saying "OFF"
     }
 }
