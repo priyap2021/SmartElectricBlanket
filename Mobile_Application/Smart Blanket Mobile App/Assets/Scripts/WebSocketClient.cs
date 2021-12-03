@@ -6,6 +6,7 @@ public class WebSocketClient : MonoBehaviour
     WebSocket ws;
     void Start()
     {
+        //ws = new WebSocket("ws://localhost:8080"); 
         ws = new WebSocket("ws://10.16.84.97:8080"); // creates the initial websocket, and use port 8080
         ws.Connect(); // connect the websocket to the server
     }
