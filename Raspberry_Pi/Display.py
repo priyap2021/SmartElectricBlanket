@@ -13,24 +13,24 @@ class On_Display:
             
     def init_labels(self):
         self.oled.fill(0) #clear screen and then write the text, more labels can be added if needed (not much though)
-        self.oled.text("Temp: ", 0, 0, 1)
-        self.oled.text("Device: ", 0, 20, 1)
+        self.oled.text("Temp: ", 0, 0, 1) 
+        self.oled.text("Status: ", 0, 20, 1) #changed from 'device' to status
         self.oled.show()
             
-    def draw_labels(self, newTemp, conDevice):
+    def draw_labels(self, newTemp, statusMsg):
         self.oled.fill(0) #clear screen and then write the text, more labels can be added if needed (not much though)
         self.oled.text("Temp: ", 0, 0, 1)
-        self.oled.text("Device: ", 0, 20, 1)
+        self.oled.text("Status: ", 0, 20, 1) #changed from 'device' to status
         
         if newTemp is not None: #make sure newTemp actually exists before trying to write it
             self.oled.text(str(newTemp), 32, 0, 1)
         else:
             self.oled.text("No Temp", 32, 0, 1)    
                     
-        if conDevice is not None: #make sure conDevice actually exists before trying to write it
-            self.oled.text(conDevice, 45, 20, 1)
+        if statusMsg is not None: #make sure statusMsg actually exists before trying to write it
+            self.oled.text(statusMsg, 45, 20, 1)
         else:
-            self.oled.text("No Device", 45, 20, 1)   
+            self.oled.text("waiting...", 45, 20, 1)   
                     
         self.oled.show() #show the text that was just drawn, nuff said
     
