@@ -33,10 +33,13 @@ def change_temp(req_temp):
             temp = sensor.get_temperature() # update temp by getting a measure from the probe
             time.sleep(0.05)
             cur_temp = sensor.get_temperature()
-            if temp != cur_temp: #TODO: include an OR here for if the connected device changes
-                disp.draw_labels(temp, "Heating...")
+            if cur_temp != temp: #TODO: include an OR here for if the connected device changes
+                disp.draw_labels(cur_temp, "Heating To " + str(req_temp))
         kill_sig() # kill the signal once the correct temperature has been reached.
+        disp.draw_labels(temp, "Temp Reached!!")
+        time.sleep(3)
+        disp.draw_labels(temp, "Ready to Heat")
     else:
         disp.draw_labels(temp, "At Temperature!!")
-        time.sleep(1)
+        time.sleep(3)
         disp.draw_labels(temp, "Ready to Heat")

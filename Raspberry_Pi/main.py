@@ -7,29 +7,27 @@ import os
 from w1thermsensor import W1ThermSensor
 
 PORT = 8080
-
-print("Server is listening on Port " + str(PORT))
+on = False
+status = " "
 
 async def handleMessage(websocket, path):
     status = "awaiting command..."
-    on = False
     sensor = W1ThermSensor()
     disp = Display.On_Display() #from the display script
-    print("A client has just connected")
 
     async for message in websocket: # anytime there is an await, need to wrap it with an async
+        global on
+        global status
         if on == True:
             temp = sensor.get_temperature()
-            time.sleep(0.05)
-            cur_temp = sensor.get_temperature()
-            if temp != cur_temp: #TODO: include an OR here for if the connected device changes
-                disp.draw_labels(temp, status)
+            disp.draw_labels(temp, status)
             
         if message == "ON": # turn on blanket
             if on == False:
                 on = True
                 status = "Ready to Heat"
-                print("Turn the blanket ON")
+                temp = sensor.get_temperature()
+                disp.draw_labels(temp, status)
 
         elif message == "OFF": # turn off blanket
             if on == True:
@@ -37,13 +35,11 @@ async def handleMessage(websocket, path):
                 disp.draw_labels(temp, "Powering down...") #calling disp instead of changing status so this will be seen
                 time.sleep(2)
                 os.system("shutdown now") #if this doesn't work, chmod the script
-                print("Turn the blanket OFF")
                 
         else: # change the temp of the blanket
             if on == True: 
-                req_temp = int(message) #cast to an int, this will get passed to blanket_ctrl
-                blanket_ctrl.change_temp(req_temp)#should be right, might throw errors
-                print(f"Change the temperature to {temp}")
+                req_temp = int(message) # cast to an int, this will get passed to blanket_ctrl
+                blanket_ctrl.change_temp(req_temp)# should be right, might throw errors
 
         await websocket.send("Server received " + message) # send the message back to the client
 
